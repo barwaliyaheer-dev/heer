@@ -20,18 +20,8 @@
 
 body{
     font-family:'Inter', sans-serif;
-    background:#ffffff;
+    background:#fff;
     color:#333;
-}
-
-/* NAV */
-.navbar{
-    position:fixed;
-    width:100%;
-    top:0;
-    padding:18px 40px;
-    background:#2B4789;
-    z-index:1000;
 }
 
 /* HERO */
@@ -48,8 +38,8 @@ body{
 }
 
 .hero img{
-    width:230px;
-    height:230px;
+    width:240px;
+    height:240px;
     object-fit:cover;
     border-radius:50%;
     border:5px solid white;
@@ -98,19 +88,19 @@ h2::after{
     background:#10B183;
 }
 
-/* IMAGE TITLES (FIXED PROPERLY) */
-.image-title{
-    text-align:center;
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.8rem;
-    margin:40px 0 15px;
-    color:#E36D9B;
-}
-
 /* ABOUT */
 .about p{
     margin-bottom:18px;
     text-align:center;
+}
+
+/* IMAGE TITLES */
+.image-title{
+    text-align:center;
+    font-size:1.8rem;
+    margin:40px 0 15px;
+    color:#E36D9B;
+    font-family:'Cormorant Garamond', serif;
 }
 
 /* IMAGE GROUP */
@@ -134,6 +124,42 @@ h2::after{
     transform:scale(1.05);
 }
 
+/* SKILLS */
+.skills-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+}
+
+.skill-box{
+    background:#A0CB75;
+    padding:30px;
+    border-radius:18px;
+    width:300px;
+    transition:0.3s;
+}
+
+.skill-box:hover{
+    transform:translateY(-8px);
+}
+
+.skill-box h3{
+    text-align:center;
+    margin-bottom:15px;
+    color:#2B4789;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.skill-box ul{
+    list-style:none;
+    text-align:center;
+}
+
+.skill-box li{
+    margin:10px 0;
+}
+
 /* CARD */
 .card{
     background:#E7DD6A;
@@ -141,37 +167,12 @@ h2::after{
     border-radius:18px;
 }
 
-.card ul{
-    margin-top:15px;
-    padding-left:20px;
-}
-
-/* ACHIEVEMENTS */
-.skills-grid{
-    display:flex;
-    flex-wrap:wrap;
-    gap:18px;
-    justify-content:center;
-}
-
-.skill-item{
-    background:#10B183;
-    color:white;
-    padding:14px 22px;
-    border-radius:30px;
-}
-
 /* CONTACT */
-.contact{
-    text-align:center;
-}
-
 .contact-box{
     background:#A0CB75;
     padding:30px;
     border-radius:20px;
-    max-width:600px;
-    margin:auto;
+    text-align:center;
 }
 
 .contact a{
@@ -179,7 +180,6 @@ h2::after{
     margin:10px 0;
     color:#2B4789;
     text-decoration:none;
-    font-weight:500;
 }
 
 /* FOOTER */
@@ -192,7 +192,6 @@ footer{
 
 .heart{
     color:#E36D9B;
-    font-size:1.2rem;
 }
 
 </style>
@@ -204,27 +203,29 @@ footer{
 <section class="hero show">
 <img src="https://image2url.com/r2/default/images/1773914683419-c6352bc7-c280-412b-a11e-bce9cdcde692.jpeg">
 <h1>Heer Barwaliya</h1>
-<p>Classical Dancer • Playgroup Teacher • BBA student</p>
+<p>Classical Dancer • Playgroup Teacher • BBA Entrepreneurship</p>
 </section>
 
 <!-- ABOUT -->
 <section>
 <h2>About Me</h2>
-
 <div class="about">
-<p>I am a passionate learner, classical dancer, and educator who believes in creativity, discipline, and continuous growth.</p>
 
-<p>I have trained extensively in Bharatanatyam and completed my Arangetram, representing years of dedication and performance excellence.</p>
+<p>I am a passionate learner, classical dancer, and educator who believes in the power of creativity, discipline, and continuous growth. My journey has been shaped by my involvement in performing arts, teaching young learners, and exploring the world of business and entrepreneurship.</p>
 
-<p>I am currently practicing Kathak, expanding my understanding of rhythm and storytelling.</p>
+<p>I have trained extensively in Bharatanatyam and successfully completed my Arangetram, a milestone that represents years of dedication, discipline, and performance training. Through this journey, I developed strong stage presence, perseverance, and a deep appreciation for Indian classical art forms.</p>
 
-<p>I have performed in over 30 stage performances and represented India in Turkey and Hungary.</p>
+<p>Alongside Bharatanatyam, I am currently practicing Kathak, which has helped me further expand my understanding of rhythm, storytelling, and expression within Indian classical dance traditions.</p>
 
-<p>I performed in front of Former CM Vijay Rupani, which remains a proud moment.</p>
+<p>Dance has given me the opportunity to perform on numerous stages and represent India at international cultural events in Turkey and Hungary. I have participated in over 30 group stage performances and have had the honor of performing in front of Former Chief Minister of Gujarat, Vijay Rupani.</p>
 
-<p>I work as a Playgroup Teacher at Little Millennium School and pursue BBA from IIM Bangalore.</p>
+<p>Alongside my artistic pursuits, I currently work as a Playgroup Teacher at Little Millennium School, where I create engaging and supportive learning environments for young children. This role has strengthened my communication skills, patience, adaptability, and leadership abilities.</p>
+
+<p>Academically, I am pursuing a BBA in Digital Business and Entrepreneurship from IIM Bangalore, where I am developing knowledge in business strategy, marketing, and innovation.</p>
+
+<p>Through my experiences in performing arts, education, and business studies, I continue to build a well-rounded perspective that values creativity, cultural expression, and lifelong learning.</p>
+
 </div>
-
 </section>
 
 <!-- DANCE -->
@@ -256,33 +257,40 @@ footer{
 <section>
 <h2>Skills</h2>
 
-<div class="card">
+<div class="skills-wrapper">
 
-<h3 style="text-align:center; margin-bottom:20px;">Creative Skills</h3>
-<div class="skills-grid">
-<div class="skill-item">Bharatanatyam</div>
-<div class="skill-item">Kathak</div>
-<div class="skill-item">Stage Performance</div>
-<div class="skill-item">Cultural Representation</div>
+<div class="skill-box">
+<h3>Creative</h3>
+<ul>
+<li>Bharatanatyam</li>
+<li>Kathak</li>
+<li>Stage Performance</li>
+<li>Cultural Representation</li>
+</ul>
 </div>
 
-<h3 style="text-align:center; margin:40px 0 20px;">Professional Skills</h3>
-<div class="skills-grid">
-<div class="skill-item">Communication</div>
-<div class="skill-item">Teaching</div>
-<div class="skill-item">Leadership</div>
-<div class="skill-item">Teamwork</div>
+<div class="skill-box">
+<h3>Professional</h3>
+<ul>
+<li>Communication</li>
+<li>Teaching & Classroom Engagement</li>
+<li>Leadership</li>
+<li>Team Collaboration</li>
+</ul>
 </div>
 
-<h3 style="text-align:center; margin:40px 0 20px;">Technical Skills</h3>
-<div class="skills-grid">
-<div class="skill-item">Basic HTML</div>
-<div class="skill-item">Basic CSS</div>
-<div class="skill-item">Presentations</div>
+<div class="skill-box">
+<h3>Technical</h3>
+<ul>
+<li>Basic HTML</li>
+<li>Basic CSS</li>
+<li>Presentations</li>
+</ul>
 </div>
 
 </div>
 </section>
+
 <!-- EXPERIENCE -->
 <section>
 <h2>Experience</h2>
@@ -293,8 +301,8 @@ footer{
 <ul>
 <li>Create engaging learning environments</li>
 <li>Plan creative activities</li>
-<li>Encourage curiosity & development</li>
-<li>Build communication skills</li>
+<li>Encourage curiosity and development</li>
+<li>Build communication and teamwork skills</li>
 </ul>
 
 <div class="image-title">School Moments</div>
@@ -306,22 +314,6 @@ footer{
 </div>
 
 </div>
-
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section>
-<h2>Achievements</h2>
-
-<div class="skills-grid">
-<div class="skill-item">Arangetram Completed</div>
-<div class="skill-item">30+ Performances</div>
-<div class="skill-item">Represented India</div>
-<div class="skill-item">Turkey & Hungary</div>
-<div class="skill-item">Performed for CM Vijay Rupani</div>
-<div class="skill-item">Melbourne Case Competition Semifinalist</div>
-</div>
-
 </section>
 
 <!-- CONTACT -->
@@ -330,7 +322,7 @@ footer{
 
 <div class="contact-box">
 <a href="mailto:barwaliyaheer@gmail.com">📧 barwaliyaheer@gmail.com</a>
-<a href="https://www.linkedin.com/in/heer-barwaliya-23729b350" target="_blank">🔗 LinkedIn Profile</a>
+<a href="https://www.linkedin.com/in/heer-barwaliya-23729b350">🔗 LinkedIn</a>
 <p>📍 India</p>
 </div>
 
@@ -341,11 +333,10 @@ footer{
 </footer>
 
 <script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-sections.forEach(sec => {
-if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-100){
 sec.classList.add("show");
 }
 });
